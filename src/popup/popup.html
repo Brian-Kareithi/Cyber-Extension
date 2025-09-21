@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Assistant</title>
+  <link rel="stylesheet" href="../assets/styles/popup.css">
+  <script src="popup.js" type="module"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <img src="../assets/icons/icon-48.png" alt="Security Assistant Logo">
+        <h1>Security Assistant</h1>
+      </div>
+      <div class="status-indicator" id="statusIndicator">
+        <span class="status-dot"></span>
+        <span class="status-text">Active</span>
+      </div>
+    </header>
+    
+    <div class="current-site" id="currentSite">
+      <div class="site-info">
+        <div class="site-icon">
+          <span id="siteIcon">🌐</span>
+        </div>
+        <div class="site-details">
+          <h2 id="domainName">No active site</h2>
+          <p id="siteStatus" class="status-neutral">Not analyzed</p>
+        </div>
+      </div>
+      <div class="security-score">
+        <div class="score-circle" id="scoreCircle">
+          <span id="scoreValue">-</span>
+        </div>
+        <p>Security Score</p>
+      </div>
+    </div>
+    
+    <div class="security-details" id="securityDetails">
+      <h3>Security Analysis</h3>
+      <ul class="details-list" id="detailsList">
+        <li class="loading">Analyzing current site...</li>
+      </ul>
+    </div>
+    
+    <div class="quick-actions">
+      <button id="refreshBtn" class="action-btn">
+        <span class="icon">🔄</span> Reanalyze
+      </button>
+      <button id="historyBtn" class="action-btn">
+        <span class="icon">📋</span> History
+      </button>
+      <button id="settingsBtn" class="action-btn">
+        <span class="icon">⚙️</span> Settings
+      </button>
+    </div>
+  </div>
+</body>
+</html>
